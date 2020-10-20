@@ -1,7 +1,26 @@
-{{name}}: <input type="text" [(ngModel)]="firstName"/>
+<!-- {{name}}: <input type="text" [(ngModel)]="firstName"/>
 {{firstName}}<button (click)="clickFunction()">Add</button>
 <br />
 {{details}}: <input type="text" [(ngModel)]="familyDetails"/>
 {{familyDetails}}<button (click)="clickFunction()">Add</button><br />
 {{age}}: <input type="type" [(ngModel)]="membersAge"/>{{membersAge}}
 <button (click)="clickFunction()">Add</button><br />
+<h3>this will show how you can change the val on click</h3>
+<button (click)="msgClick()">click me {{msgClickval}}</button><br />
+
+<h3>this is event handler in input box with $event</h3>
+<!-- Type here<input #box (keyup.enter)="keyEvent(box.value)"/>
+<button (click)="keyEvent(box.value)">Add in list</button> {{values}} --> 
+
+
+Name:-<input #box (keyup.enter)="keyEvent(box.value)"/>
+<button (click)="keyEvent(box.value)">Add</button>
+<h3 id="UserName">{{UserName}}<br></h3> 
+Age<input #phone (keyup.enter)="keyEvent1(phone.value)"/>
+<button (click)="keyEvent1(phone.value)">Add</button> 
+<h3 id="UserAge">{{UserAge}}<br></h3>
+Details<input #test (keyup.enter)="keyEvent2(test.value)"/>
+<button (click)="keyEvent2(test.value)">Add</button> 
+<h3 id="UserDescription">{{UserDescription}}</h3>
+<br>
+<button>submit</button>
