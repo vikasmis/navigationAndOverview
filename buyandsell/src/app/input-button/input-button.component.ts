@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-    styleUrls: ['./ngButton.component.css'],
-    templateUrl: './ngButton.component.html',
+    styleUrls: ['./input-button.component.css'],
+    templateUrl: './input-button.component.html',
     selector: 'app-ngButton'
 
 })
 
-export class ngButton {
+export class inputButton {
     // clickMessage = ''
     name = 'FirstName';
     details = 'Who is he/she';
     age = 'age';
     firstName = '';
-    familyDeatils = '';
+    familyDetails = '';
     membersAge = '';
     clickFunction() {
 
