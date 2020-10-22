@@ -10,17 +10,30 @@
 
 <h3>this is event handler in input box with $event</h3>
 <!-- Type here<input #box (keyup.enter)="keyEvent(box.value)"/>
-<button (click)="keyEvent(box.value)">Add in list</button> {{values}} --> 
+<button (click)="keyEvent(box.value)">Add in list</button> {{values}} -->
+<!-- <body (onload)="testload()"></body> -->
 
-
-Name:-<input #box (keyup.enter)="keyEvent(box.value)"/>
-<button (click)="keyEvent(box.value)">Add</button>
-<h3 id="UserName">{{UserName}}<br></h3> 
-Age<input #phone (keyup.enter)="keyEvent1(phone.value)"/>
-<button (click)="keyEvent1(phone.value)">Add</button> 
-<h3 id="UserAge">{{UserAge}}<br></h3>
-Details<input #test (keyup.enter)="keyEvent2(test.value)"/>
-<button (click)="keyEvent2(test.value)">Add</button> 
-<h3 id="UserDescription">{{UserDescription}}</h3>
+Name:-<input placeholder="Jane Doe" #box (keyup.enter)="keyEvent(box.value)" (blur)="keyEvent(box.value); box.value='' ">
+<button (click)="keyEvent(box.value)">Add</button> <br><br>
+<ul>
+    <li *ngFor="let value of UserName">{{value}}</li>
+</ul>
 <br>
-<button>submit</button>
+Age:- <input #phone (keyup.enter)="keyEvent1(phone.value)" (blur)="keyEvent1(phone.value); phone.value='' " />
+<button (click)="keyEvent1(phone.value)">Add</button> <br><br>
+<ul>
+    <li *ngFor="let value of UserAge">{{value}}</li>
+</ul>
+<br>
+Details:-<input #test (keyup.enter)="keyEvent2(test.value)" (blur)="keyEvent2(test.value); test.value='' ">
+<button (click)="keyEvent2(test.value)">Add</button> <br><br>
+<ul>
+    <li *ngFor="let value of UserDescription">{{value}}</li>
+</ul>
+<br>
+<!-- <body (onload)="testload()"></body> -->
+<!-- <p id ="completedetails">{{userNamesText}}</p>
+<p>previous order:-{{odser}}</p> -->
+<div id="test" >{{userNamesText}}  {{usersAgeNum}} {{usersDesText}}</div>
+
+<!-- <p></p> -->
